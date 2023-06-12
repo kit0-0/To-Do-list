@@ -45,19 +45,13 @@
   </ul>
 </details>
 
-<details>
-  <summary>Form backend service</summary>
-  <ul>
-    <li><a href="https://formspree.io/html/">formspree</a></li>
-  </ul>
-</details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 - **Demo of Linters**
-- **Demo of bookstore**
+- **Demo of todolist**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LIVE DEMO -->
