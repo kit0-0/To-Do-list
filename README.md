@@ -3,7 +3,7 @@
 
 <div align="center">
   
-  <h2><b> to-Do-List</b></h3>
+  <h2><b> To-Do-list</b></h3>
 
 </div>
 
@@ -29,9 +29,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 to-Do-List <a name="about-project"></a>
+# 📖 To-Do-list <a name="about-project"></a>
 
-**to-Do-List** is a repository.The goal is to master all of the tools and best practices learned in previous steps.
+**To-Do-list** is a repository.The goal is to master all of the tools and best practices learned in previous steps.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -64,7 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://kit0-0.github.io/to-Do-List/)
+- [Live Demo Link](https://kit0-0.github.io/To-Do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,7 +84,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-git clone https://github.com/kit0-0/to-Do-List.git
+git clone https://github.com/kit0-0/To-Do-list.git
 
 ### Install
 
@@ -159,7 +159,7 @@ npm run build
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kit0-0/to-Do-List/issues).
+Feel free to check the [issues page](https://github.com/kit0-0/To-Do-list/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
