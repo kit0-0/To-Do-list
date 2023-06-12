@@ -8,6 +8,12 @@ const storeTasksToLocalStorage = () => {
   localStorage.setItem('Tasks', JSON.stringify(tasks));
 };
 
+const sortTasks = () => {
+  tasks.forEach((task, index) => {
+    task.index = index + 1;
+  });
+};
+
 const displayTasks = () => {
   todoListContainer.textContent = '';
   tasks.forEach((task, index) => {
@@ -21,6 +27,18 @@ const displayTasks = () => {
       </li>
     `;
   });
+
+  const deleteTask = (item, index) => {
+    item.addEventListener('click', () => {
+      tasks.splice(index, 1);
+      tasks.forEach((task, newIndex) => {
+        task.index = newIndex + 1;
+      });
+      sortTasks();
+      storeTasksToLocalStorage();
+      displayTasks();
+    });
+  };
 
   const editTask = (description, index) => {
     tasks[index].description = description;
@@ -60,6 +78,7 @@ const displayTasks = () => {
         const ellipsisIcon = task.querySelector('.fa-ellipsis-vertical');
         ellipsisIcon.classList.remove('fa-ellipsis-vertical');
         ellipsisIcon.classList.add('fa-trash');
+        deleteTask(ellipsisIcon, index);
       } else {
         const trashIcon = task.querySelector('.fa-trash');
         trashIcon.classList.remove('fa-trash');
@@ -98,6 +117,11 @@ const initializeTasks = () => {
   document.addEventListener('DOMContentLoaded', displayTasks);
 };
 
+const refreshPage = () => {
+  localStorage.removeItem('Tasks');
+  window.location.reload();
+};
+
 initializeTasks();
 addBtn.addEventListener('click', addTask);
 document.addEventListener('keypress', (e) => {
@@ -105,5 +129,6 @@ document.addEventListener('keypress', (e) => {
     addTask();
   }
 });
+document.querySelector('.fa-arrows-rotate').addEventListener('click', refreshPage);
 
 export {};
