@@ -1,0 +1,1 @@
+(()=>{"use strict";var e={510:(e,r,t)=>{JSON.parse(localStorage.getItem("Tasks"))}},r={};function t(o){var a=r[o];if(void 0!==a)return a.exports;var s=r[o]={exports:{}};return e[o](s,s.exports,t),s.exports}t.d=(e,r)=>{for(var o in r)t.o(r,o)&&!t.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:r[o]})},t.o=(e,r)=>Object.prototype.hasOwnProperty.call(e,r),t(510)})();
