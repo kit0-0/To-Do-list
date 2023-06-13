@@ -1,10 +1,14 @@
 import './index.css';
 import {
-  tasks, storeTasksToLocalStorage, deleteTask, editTask, addTask,
+  tasks, storeTasksToLocalStorage, deleteTask, editTask, addTask, sortTasks,
 } from './module/taskFunctions.js';
+
+import updateStatus from './module/statusFunctions.js';
+import clearAllCompletedTasks from './module/clearTask.js';
 
 const todoListContainer = document.getElementById('todoList');
 const addBtn = document.getElementById('addBtn');
+const clearBtn = document.querySelector('.clear-completed');
 
 const displayTasks = () => {
   todoListContainer.textContent = '';
@@ -27,23 +31,24 @@ const displayTasks = () => {
   checkboxContainers.forEach((checkbox) => {
     const inputText = checkbox.nextElementSibling;
     let previousState = checkbox.checked;
-
+  
     inputText.readOnly = true;
-
+  
     checkbox.addEventListener('change', (event) => {
       const currentState = event.target.checked;
-
+  
       if (currentState !== previousState) {
         const foundTask = tasks.find((task) => task.description === inputText.value);
         if (foundTask) {
           foundTask.completed = currentState;
-          storeTasksToLocalStorage();
+          updateStatus(tasks.indexOf(foundTask), currentState);
         }
       }
-
+  
       previousState = currentState;
     });
   });
+  
 
   addedTasks.forEach((task, index) => {
     const textInput = task.querySelector('input[type="text"]');
@@ -81,6 +86,13 @@ const refreshPage = () => {
   localStorage.removeItem('Tasks');
   window.location.reload();
 };
+
+clearBtn.addEventListener('click', () => {
+  clearAllCompletedTasks();
+  sortTasks();
+  storeTasksToLocalStorage();
+  displayTasks();
+});
 
 initializeTasks();
 addBtn.addEventListener('click', () => {
