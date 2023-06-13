@@ -5,6 +5,7 @@ import {
 
 import updateStatus from './module/statusFunctions.js';
 import clearAllCompletedTasks from './module/clearTask.js';
+import { dragStart, dragOver, drop } from './module/dragAndDrop.js';
 
 const todoListContainer = document.getElementById('todoList');
 const addBtn = document.getElementById('addBtn');
@@ -74,6 +75,11 @@ const displayTasks = () => {
       const data = textInput.value.trim();
       editTask(data, index);
     });
+
+    // Drag and drop
+    task.addEventListener('dragstart', dragStart);
+    task.addEventListener('dragover', dragOver);
+    task.addEventListener('drop', drop);
   });
 };
 
@@ -119,5 +125,7 @@ document.addEventListener('keypress', (e) => {
   }
 });
 document.querySelector('.fa-arrows-rotate').addEventListener('click', refreshPage);
+// Add event listener to update the display
+document.addEventListener('updateDisplay', displayTasks);
 
 export {};
