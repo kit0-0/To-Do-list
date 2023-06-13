@@ -31,12 +31,12 @@ const displayTasks = () => {
   checkboxContainers.forEach((checkbox) => {
     const inputText = checkbox.nextElementSibling;
     let previousState = checkbox.checked;
-  
+
     inputText.readOnly = true;
-  
+
     checkbox.addEventListener('change', (event) => {
       const currentState = event.target.checked;
-  
+
       if (currentState !== previousState) {
         const foundTask = tasks.find((task) => task.description === inputText.value);
         if (foundTask) {
@@ -44,11 +44,10 @@ const displayTasks = () => {
           updateStatus(tasks.indexOf(foundTask), currentState);
         }
       }
-  
+
       previousState = currentState;
     });
   });
-  
 
   addedTasks.forEach((task, index) => {
     const textInput = task.querySelector('input[type="text"]');
