@@ -58,7 +58,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://kit0-0.github.io/To-Do-list/)
+- [Live Demo Link](https://kit0-0.github.io/To-Do-list/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
