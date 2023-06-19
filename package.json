@@ -23,6 +23,7 @@
     "start": "webpack-dev-server --mode production --open",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test": "jest --coverage"
   }
 }
