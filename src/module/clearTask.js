@@ -1,9 +1,8 @@
 import { tasks, storeTasksToLocalStorage } from './taskFunctions.js';
 
 const clearAllCompletedTasks = () => {
-  const filteredTasks = tasks.filter((task) => !task.completed);
-  tasks.length = 0;
-  tasks.push(...filteredTasks);
+  const incompleteTasks = tasks.filter((task) => !task.completed);
+  tasks.splice(0, tasks.length, ...incompleteTasks);
   storeTasksToLocalStorage();
 };
 
