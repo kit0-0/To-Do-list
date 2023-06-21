@@ -52,6 +52,4 @@ describe('taskFunctions', () => {
       expect(localStorage.setItem).not.toHaveBeenCalled();
     });
   });
-
- 
 });
