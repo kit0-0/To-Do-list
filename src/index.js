@@ -1,6 +1,6 @@
 import './index.css';
 import {
-  tasks, storeTasksToLocalStorage, deleteTask, editTask, addTask, sortTasks,
+  tasks, deleteTask, editTask, addTask,
 } from './module/taskFunctions.js';
 
 import updateStatus from './module/statusFunctions.js';
@@ -94,8 +94,6 @@ const refreshPage = () => {
 
 clearBtn.addEventListener('click', () => {
   clearAllCompletedTasks();
-  sortTasks();
-  storeTasksToLocalStorage();
   displayTasks();
 });
 
