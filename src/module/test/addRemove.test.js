@@ -53,7 +53,6 @@ describe('taskFunctions', () => {
     });
   });
 
-
   describe('deleteTask', () => {
     beforeEach(() => {
       tasks.push(
@@ -81,5 +80,4 @@ describe('taskFunctions', () => {
       );
     });
   });
-  
 });
