@@ -1,5 +1,3 @@
-
-
 import updateStatus from '../statusFunctions.js';
 import { tasks } from '../taskFunctions.js';
 
