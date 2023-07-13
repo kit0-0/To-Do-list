@@ -1,4 +1,3 @@
-// statusUpdates.js
 import { tasks, storeTasksToLocalStorage } from './taskFunctions.js';
 
 const updateStatus = (index, completed) => {
